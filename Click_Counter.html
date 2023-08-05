@@ -1,0 +1,31 @@
+<!-- 2) Click Counter -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #courterDisplay {
+        font: bold;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <p id="courterDisplay">1</p>
+      <button onclick="increaseFun()">increase Number</button>
+    </div>
+
+    <script>
+      let num = 1;
+      const increaseFun = () => {
+        const textHolder = document.getElementById("courterDisplay");
+        textHolder.innerText = num;
+        num++;
+      };
+      increaseFun();
+    </script>
+  </body>
+</html>

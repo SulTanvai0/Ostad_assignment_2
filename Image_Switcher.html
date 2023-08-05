@@ -1,0 +1,32 @@
+<!-- 3) Image Switcher -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <img id="img" height="350px" width="450px" alt="" />
+      </div>
+      <button onclick="imgHandler(0)">IMAGE 1</button>
+      <button onclick="imgHandler(1)">IMAGE 2</button>
+    </div>
+
+    <script>
+      const data = [
+        `https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg`,
+
+        `https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=`,
+      ];
+
+      const imgHandler = (num) => {
+        document.getElementById("img").src = data[num];
+      };
+      imgHandler(0);
+    </script>
+  </body>
+</html>

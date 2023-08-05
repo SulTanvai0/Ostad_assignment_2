@@ -1,0 +1,58 @@
+<!-- DOM Manipulation -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 500px;
+        height: 100px;
+        border: 1px solid black;
+        padding: 5px;
+      }
+      .textDiv {
+        width: 480px;
+        height: 50px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      #textBtn {
+        margin: 5px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="textDiv">
+        <p id="text"></p>
+      </div>
+      <button id="textBtn" onclick="textHandler()">Get Cote</button>
+    </div>
+
+    <script>
+      const data = [
+        `"The only way to do great work is to love what you do." - Steve Jobs`,
+        `"In three words I can sum up everything I've learned about life: it goes on." - Robert Frost`,
+        `"The only thing we have to fear is fear itself." - Franklin D. Roosevelt`,
+        `"Be the change that you wish to see in the world." - Mahatma Gandhi`,
+        `"The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson Mandela`,
+        `"Two things are infinite: the universe and human stupidity; and I'm not sure about the universe." - Albert Einstein`,
+        `"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment." - Ralph Waldo Emerson`,
+      ];
+      let cote = 1;
+
+      const textHandler = () => {
+        if (cote >= 7) {
+          cote = 1;
+        }
+        const textHolder = document.getElementById("text");
+        textHolder.innerText = data[cote];
+        cote++;
+      };
+      textHandler();
+    </script>
+  </body>
+</html>
